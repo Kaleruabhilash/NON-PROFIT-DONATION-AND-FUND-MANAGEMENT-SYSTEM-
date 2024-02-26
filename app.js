@@ -43,11 +43,6 @@ db.connect((err) => {
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
-
-// app.js
-
-// ... (previous code)
-
 app.get('/signup', (req, res) => {
     res.sendFile(__dirname + '/views/signup.html');
   });
@@ -110,13 +105,6 @@ app.get('/signup', (req, res) => {
       res.redirect('/donation');
     });
   });
-  
-  // ... (rest of the code)
-  
-
-// app.js
-
-// ... (previous code)
 
 app.get('/donation', (req, res) => {
     // Check if the user is authenticated (logged in)
@@ -153,7 +141,6 @@ app.get('/donation', (req, res) => {
     });
 });
 app.post('/logout', (req, res) => {
-  // Clear the session to log the user out
   req.session.destroy((err) => {
     if (err) {
       console.error('Error during logout: ' + err.message);
@@ -172,9 +159,6 @@ function processDonationData(donations) {
   return data;
 }
  // app.js
-
-// ... (previous code)
-
 app.get('/dashboard', (req, res) => {
     // Check if the user is authenticated (logged in)
     if (!req.session.userId) {
@@ -199,11 +183,6 @@ app.get('/dashboard', (req, res) => {
       });
     });
   });
-  
-  // ... (remaining code)
-  
-
-
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
