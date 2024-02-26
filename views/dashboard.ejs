@@ -1,0 +1,96 @@
+<!-- views/dashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css"> <!-- Add your custom styles if needed -->
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1b98eb;
+      color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 50px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #1b98eb;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .btn-logout {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    .btn-logout:hover {
+      background-color: #c82333;
+    }
+  </style>
+
+  <title>Personal Dashboard</title>
+</head>
+<body>
+  <header>
+    <h1>Personal Dashboard</h1>
+  </header>
+  
+  <div class="container">
+    <section>
+      <h2>Donation History</h2>
+      <ul>
+        <% donations.forEach(function(donation) { %>
+          <li><%= donation.category %> - <%= donation.amount %></li>
+        <% }); %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Make Another Donation</h2>
+      <a class="btn btn-primary" href="/donation">Make Another Donation</a>
+    </section>
+
+    <section>
+      <form action="/logout" method="post">
+        <button class="btn btn-logout" type="submit">Logout</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

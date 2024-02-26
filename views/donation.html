@@ -1,0 +1,156 @@
+<!-- views/donation.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+   body {
+      background-color: #f8f9fa; /* Set a light background color */
+    }
+
+    header {
+      text-align: right;
+      padding: 20px;
+      background-color: #1b98eb; /* Header background color */
+      color: #fff; /* Header text color */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for elevation effect */
+      position: relative;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 50px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #28a745; /* Set button color */
+      color: #fff; /* Set button text color */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838; /* Change button color on hover */
+    }
+
+    /* Simple fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    section {
+      animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+    }
+
+    /* Add styles for the settings button and dropdown */
+    .settings-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-block;
+    }
+
+    .settings-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .settings-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .settings-content a:hover {
+      background-color: #ddd;
+    }
+
+    .settings-container:hover .settings-content {
+      display: block;
+    }
+  </style>
+  <title>Donation</title>
+</head>
+<body>
+  <header>
+    <h1>Non-Profit Donation</h1>
+  </header>
+  
+  <div class="container">
+    <section>
+      <h2>Choose a Donation Category</h2>
+      <form action="/donation" method="post">
+        <label for="category">Select Category:</label>
+        <select id="category" name="category" required>
+          <option value="education">Education</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="environment">Environment</option>
+          <!-- Add more categories as needed -->
+        </select>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br>
+        <button type="submit">Make Donation</button>
+      </form>
+    </section>
+    <!-- Add the settings container -->
+    <div class="settings-container">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="settingsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Settings
+      </button>
+      <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+        <a class="dropdown-item" href="/dashboard">Dashboard</a>
+        <div class="dropdown-divider"></div>
+        <form action="/logout" method="post">
+          <button class="dropdown-item" type="submit">Logout</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap and jQuery scripts at the end of the body -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

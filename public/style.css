@@ -1,0 +1,128 @@
+/* Add this to your existing style.css file */
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Set a light background color */
+}
+
+/* Header Styles */
+header {
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1b98eb; /* Header background color */
+  color: #fff; /* Header text color */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for elevation effect */
+}
+
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: underline;
+  margin-left: 20px;
+  font-size: larger;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button Styles */
+.button-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  padding: 10px 20px; /* Adjust padding */
+}
+
+.button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Container Styles */
+.container {
+  margin-top: 20px;
+}
+
+/* About Section Styles */
+/* About Section Styles */
+/* About Section Styles */
+#about {
+  padding: 50px 0;
+  background-color: #fff; /* Set background color */
+  border-radius: 10px;
+  color: black; /* Text color */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+#about h2 {
+  color: black; /* Heading text color on the background */
+  font-size: 28px; /* Increase the font size */
+  font-family: 'Georgia', serif; /* Change font style to Georgia */
+}
+
+#about p {
+  color: black; /* Text color on the background */
+  font-size: 25px; /* Increase the font size */
+  font-family: 'Georgia', serif; /* Change font style to Georgia */
+}
+
+
+/* Achievements Section Styles */
+#achievements {
+  background-color: #f8f9fa;
+  color: #495057;
+  padding: 50px 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  font-size: 25px;
+}
+
+.achievement-icon {
+  margin-right: 20px;
+}
+
+/* Contact Section Styles */
+#contact {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 50px 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+
+#contact h2{
+  text-align: center;
+}
+

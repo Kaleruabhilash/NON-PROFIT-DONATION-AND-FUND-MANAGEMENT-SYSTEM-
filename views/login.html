@@ -1,0 +1,83 @@
+<!-- views/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Set a light background color */
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1b98eb; /* Header background color */
+      color: #fff; /* Header text color */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for elevation effect */
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 50px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <title>Login</title>
+</head>
+<body>
+  <header>
+    <h1>Non-Profit Donation</h1>
+  </header>
+  
+  <div class="container">
+    <section>
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
